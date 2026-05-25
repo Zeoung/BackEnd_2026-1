@@ -24,10 +24,11 @@ public class HelloController {
     public Map<String, Object> json() {
         Map<String, Object> result = new HashMap<>();
 
-        result.put("age", 25);
-        result.put("name", "박준용");
+        result.put("age", 19);
+        result.put("name", "김형민");
 
         return result;
     }
 }
+
 
