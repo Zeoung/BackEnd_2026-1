@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>게시판</title>
+</head>
+<body>
+<div th:text="${boardName}"></div>
+
+<div th:each="article : ${articles}">
+    <h2 th:text="${article.title}"></h2>
+    <p>
+        <span th:text="${article.author}"></span> |
+        <span th:text="${#temporals.format(article.date, 'yyyy-MM-dd')}"></span>
+    </p>
+    <p th:text="${article.content}"></p>
+</div>
+</body>
+</html>
