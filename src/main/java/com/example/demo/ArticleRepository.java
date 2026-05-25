@@ -14,6 +14,8 @@ public class ArticleRepository {
     public Article save(Article article) {
         article.id = seq++;
         store.put(article.id, article);
+        article.setId(seq++);
+        store.put(article.getId(), article);
         return article;
     }
 

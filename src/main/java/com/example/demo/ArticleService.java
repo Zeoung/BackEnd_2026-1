@@ -16,6 +16,8 @@ public class ArticleService {
     public Article create(Article article) {
         article.date = OffsetDateTime.now();
         article.update = OffsetDateTime.now();
+        article.setDate(OffsetDateTime.now());
+        article.setUpdate(OffsetDateTime.now());
         return repository.save(article);
     }
 
@@ -33,6 +35,8 @@ public class ArticleService {
         article.title = req.title;
         article.content = req.content;
         article.content = req.content;
+        article.setTitle(req.getTitle());
+        article.setContent(req.getContent());
         return article;
     }
 
